@@ -4,7 +4,7 @@ import Helmet from "react-helmet";
 import ReactPixel from "react-facebook-pixel";
 const Layout = ({ children }) => {
   useEffect(() => {
-    ReactPixel.init("872956439898893");
+    ReactPixel.init("416933675933313");
     ReactPixel.pageView();
   }, []);
   return (
