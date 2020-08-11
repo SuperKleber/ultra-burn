@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  border: 0;
+  background: linear-gradient(to right, black 80%, @red 20%);
+  color: white;
+  font-family: @font;
+  @media (max-width: 800px) {
+    background: black;
+    &:before {
+      display: flex;
+      content: " ";
+      width: 50vw;
+      height: 180px;
+      border-radius: 0 16px 16px 0;
+      background: @red;
+      position: absolute;
+      left: 0;
+      top: 10%;
+    }
+  }
+}
+a {
+  text-decoration: none;
+}

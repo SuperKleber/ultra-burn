@@ -1,0 +1,47 @@
+.menu {
+  width: 60vw;
+  z-index: 2;
+  padding: 16px 0 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo {
+    width: 50px;
+  }
+  .listMenu {
+    .fullWidth();
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .itemMenu {
+    }
+  }
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+.menuBurger {
+  display: none;
+  margin: 16px 0 0 16px;
+  @media (max-width: 800px) {
+    display: flex;
+    .iconBurger {
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      // background: red;
+      span {
+        display: flex;
+        width: 100%;
+        // margin: 8px 0;
+        height: 5px;
+        border-radius: 4px;
+        background: white;
+      }
+    }
+  }
+}

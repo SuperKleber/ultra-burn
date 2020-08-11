@@ -1,0 +1,23 @@
+{
+  "name": "ultra-burn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gatsby-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^2.23.11",
+    "gatsby-cli": "^2.12.82",
+    "gatsby-plugin-less": "^4.0.3",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "less": "^3.12.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-facebook-pixel": "^0.1.3"
+  }
+}

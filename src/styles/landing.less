@@ -1,0 +1,81 @@
+.landing {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  .copy {
+    margin: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    .h1 {
+      font-weight: bold;
+    }
+    @media (max-width: 1100px) {
+      .h1 {
+        font-size: 40px;
+      }
+      .h3 {
+        font-size: 20px;
+      }
+    }
+    @media (max-width: 900px) {
+      .h1 {
+        margin-bottom: 8px;
+      }
+      .h3 {
+        margin-bottom: 32px;
+      }
+      justify-content: center;
+    }
+    @media (max-width: 800px) {
+      margin: 0;
+      justify-content: center;
+      .h1 {
+        font-size: 30px;
+      }
+      .h3 {
+        font-size: 18px;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    align-items: center;
+  }
+}
+.backgroundImage {
+  position: absolute;
+  z-index: -1;
+  height: 100vh;
+
+  width: 350px;
+  top: 0;
+  right: 20%;
+  background-size: cover;
+  background-image: linear-gradient(to right, black, transparent),
+    url("/img/cuerpo.png");
+  @media (max-width: 800px) {
+    right: 0;
+  }
+}
+.bote {
+  z-index: 2;
+
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  width: 400px;
+  transform: translate(50%, -50%);
+  @media (max-width: 800px) {
+    position: static;
+    transform: none;
+    width: 240px;
+  }
+  -webkit-filter: drop-shadow(0 0 25px rgb(0, 0, 0));
+}
+.containerBote {
+}
