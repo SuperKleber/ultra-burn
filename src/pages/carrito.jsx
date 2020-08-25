@@ -6,9 +6,7 @@ import whatsappApi from "../lib/whatsappApi";
 import { FaWhatsapp } from "react-icons/fa";
 import ReactPixel from "react-facebook-pixel";
 const Carrito = ({ location }) => {
-  const [cart, setCart] = useState(
-    location.state.producto ? [{ ...location.state.producto }] : []
-  );
+  const [cart, setCart] = useState([]);
   const productsContainer = useRef(null);
   let total = 0;
   cart.forEach((p) => {
@@ -20,6 +18,9 @@ const Carrito = ({ location }) => {
         productsContainer.current.scrollWidth / 6,
         0
       );
+      if (location.state.producto) {
+        setCart([{ ...location.state.producto }]);
+      }
     } catch (error) {}
   }, []);
   return (
