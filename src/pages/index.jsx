@@ -4,6 +4,8 @@ import "../styles/master.less";
 import Modal from "../components/Modal";
 import Carrito from "../components/Carrito";
 import ReactPixel from "react-facebook-pixel";
+import { productos } from "../data/data";
+import { Link } from "gatsby";
 const Index = () => {
   const [openModal, setOpenModal] = useState(false);
   return (
@@ -18,15 +20,13 @@ const Index = () => {
           <h1 className="h3">
             El mejor gel <br /> quema grasa del mercado
           </h1>
-          <button
+          <Link
+            state={{ producto: { ...productos[0], cantidad: 1 } }}
             className="button fullWidth"
-            onClick={() => {
-              setOpenModal(true);
-              ReactPixel.track("AddToCart");
-            }}
+            to="/carrito"
           >
             COMPRA AQUÍ
-          </button>
+          </Link>
         </div>
       </div>
       <div className="background" />

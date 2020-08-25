@@ -1,24 +1,18 @@
 body {
   margin: 0;
   border: 0;
-  background: linear-gradient(to right, black 80%, @red 20%);
+  background: black;
+  overflow-x: hidden;
+}
+.layout {
   color: white;
+  min-height: 100vh;
+  min-width: 100vw;
   font-family: @font;
-  @media (max-width: 800px) {
-    background: black;
-    &:before {
-      display: flex;
-      content: " ";
-      width: 50vw;
-      height: 180px;
-      border-radius: 0 16px 16px 0;
-      background: @red;
-      position: absolute;
-      left: 0;
-      top: 10%;
-    }
-  }
+  position: relative;
+  // padding: 0 16px;
 }
 a {
   text-decoration: none;
+  color: white;
 }

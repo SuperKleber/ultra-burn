@@ -1,46 +1,87 @@
-.menu {
-  width: 60vw;
-  z-index: 2;
-  padding: 16px 0 0 16px;
+.header {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  .logo {
-    width: 50px;
-  }
-  .listMenu {
-    .fullWidth();
+  flex-direction: column;
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  padding: 16px 0 0 16px;
+  .menu {
+    width: 60vw;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    .itemMenu {
+
+    .logo {
+      width: 50px;
+      @media (max-width: 800px) {
+        display: none;
+      }
     }
-  }
-  @media (max-width: 800px) {
-    display: none;
-  }
-}
-.menuBurger {
-  display: none;
-  margin: 16px 0 0 16px;
-  @media (max-width: 800px) {
-    display: flex;
-    .iconBurger {
-      width: 35px;
-      height: 35px;
+    .listMenu {
+      .fullWidth();
+
       display: flex;
       justify-content: space-around;
       align-items: center;
-      flex-direction: column;
-      // background: red;
-      span {
-        display: flex;
+
+      @media (max-width: 800px) {
         width: 100%;
-        // margin: 8px 0;
-        height: 5px;
-        border-radius: 4px;
-        background: white;
+        flex-direction: column;
+        .itemMenu {
+          margin: 4px 0;
+          padding: 4px 0;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          cursor: pointer;
+        }
+      }
+    }
+    @media (max-width: 800px) {
+      flex-direction: column;
+      width: 100%;
+      &.closeMenu {
+        display: none;
+      }
+      &.openMenu {
+        display: flex;
+      }
+    }
+  }
+  .menuBurger {
+    background: black;
+    width: calc(100% - 32px);
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        width: 40px;
+      }
+      .iconBurger {
+        z-index: 2;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        // background: red;
+        span {
+          display: flex;
+          width: 100%;
+          // margin: 8px 0;
+          height: 5px;
+          border-radius: 4px;
+          background: white;
+        }
       }
     }
   }

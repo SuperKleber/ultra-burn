@@ -1,0 +1,66 @@
+.footer {
+  .testimonios {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .testimonio {
+      width: calc(100% - 80px);
+      padding: 8px;
+      display: grid;
+      grid-template-rows: 160px 180px;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      justify-items: center;
+      border: 2px solid fade(@red, 30%);
+      margin: 4px;
+
+      .foto {
+        width: 140px;
+        border-radius: 4px;
+        @media (max-width: 420px) {
+          width: 100px;
+        }
+      }
+      .texto {
+        grid-row: ~"2 / 3";
+        grid-column: ~"1 / 3";
+        text-align: center;
+      }
+
+      .fotoContainer {
+        position: relative;
+        &.antes {
+          border-radius: 8px 8px 8px 0;
+          &::before {
+            content: "antes";
+            position: absolute;
+            bottom: -26px;
+            border: 2px solid @red;
+            left: 0;
+            padding: 4px;
+            border-radius: 0 0 8px 8px;
+          }
+        }
+        &.despues {
+          border-radius: 8px 8px 0 8px;
+          &::before {
+            content: "después";
+            position: absolute;
+            bottom: -26px;
+            border: 2px solid @red;
+            background: @red;
+            border-radius: 0 0 8px 8px;
+            right: 0;
+            padding: 4px;
+          }
+        }
+      }
+    }
+    .facebook {
+      width: calc(100% - 64px) !important;
+    }
+  }
+}
