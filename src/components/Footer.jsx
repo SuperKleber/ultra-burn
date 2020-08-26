@@ -13,7 +13,7 @@ const Footer = () => {
             <img className="foto despues" src="/img/despues1.png" alt="" />
           </div>
           <div className="texto">
-            El gel antigrasa me ayudó mucho a moldear mi físico durante mis
+            El gel quema grasa me ayudó mucho a moldear mi físico durante mis
             entrenamientos.
           </div>
         </div>
